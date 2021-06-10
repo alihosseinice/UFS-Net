@@ -18,11 +18,11 @@ class BasicConv2d(nn.Module):
         return F.leaky_relu(x, inplace=True)
 
 
-class Inception(nn.Module):
+class MultiConv(nn.Module):
     __constants__ = ['branch2', 'branch3']
 
     def __init__(self, in_channels, ch3x3red, ch3x3, ch5x5red, ch5x5, conv_block=None):
-        super(Inception, self).__init__()
+        super(MultiConv, self).__init__()
         if conv_block is None:
             conv_block = BasicConv2d
 
@@ -54,10 +54,10 @@ class UFSNet(nn.Module):
     def __init__(self, num_classes=3, transform_input=False, init_weights=True, blocks=None):
         super(UFSNet, self).__init__()
         if blocks is None:
-            blocks = [BasicConv2d, Inception]
+            blocks = [BasicConv2d, MultiConv]
         assert len(blocks) == 2
         conv_block = blocks[0]
-        inception_block = blocks[1]
+        multi_conv_block = blocks[1]
 
         self.transform_input = transform_input
 
@@ -67,15 +67,15 @@ class UFSNet(nn.Module):
         self.conv3 = conv_block(64, 192, kernel_size=3, padding=1)
         self.maxpool2 = nn.MaxPool2d(3, stride=2, ceil_mode=True)
 
-        self.inception3a = inception_block(192, 64, 128, 16, 32)
+        self.inception3a = multi_conv_block(192, 64, 128, 16, 32)
         self.maxpool3 = nn.MaxPool2d(3, stride=2, ceil_mode=True)
 
-        self.inception4a = inception_block(160, 96, 192, 24, 48)
-        self.inception4b = inception_block(240, 128, 256, 32, 64)
+        self.inception4a = multi_conv_block(160, 96, 192, 24, 48)
+        self.inception4b = multi_conv_block(240, 128, 256, 32, 64)
         self.maxpool4 = nn.MaxPool2d(3, stride=2, ceil_mode=True)
 
-        self.inception5a = inception_block(320, 160, 256, 40, 96)
-        self.inception5b = inception_block(352, 192, 288, 48, 128)
+        self.inception5a = multi_conv_block(320, 160, 256, 40, 96)
+        self.inception5b = multi_conv_block(352, 192, 288, 48, 128)
 
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
         self.dropout = nn.Dropout(0.2)
