@@ -1,1 +1,11 @@
+UFS-Net training dataset includes two sets of "original images" and "artificial images".
+You can download each of these collections using the following links.
+
+Orginal Images : https://drive.google.com/drive/folders/1ZfYInPnLyvbhZsdU0EA0AH4dkp01C6eg?usp=sharing
+Size : ... GB
+Number of images : 400,000
+
+Artifial Images : https://drive.google.com/drive/folders/1f4Byf5WgmJRHt0xAbvC-_1JB7r0tIkjW?usp=sharing
+Size : ... GB
+Number of images : 400,000
 
