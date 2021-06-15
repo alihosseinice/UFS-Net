@@ -24,3 +24,6 @@ Number of images : 26,097
 All:
 Size : 1/379 GB
 Number of images : 36,434
+
+
+*** Note : To reduce the upload size, the images of "Mivia-TestData" and "UFS-Net-TestData" datasets were resized to 224 x 224.
