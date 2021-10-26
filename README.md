@@ -9,3 +9,4 @@ Ali Hosseini, Mahdi Hashemzadeh, Nacer Farajzadeh, "UFS-Net: a Unified Flame and
 2)	Please do not distribute the database or source codes to others without the authorization from Dr. Mahdi Hashemzadeh (Corresponding author).
 
 Authors’ Emails: a.hosseini[at]azaruniv.ac.ir (A. Hosseini), hashemzadeh[at]azaruniv.ac.ir (M. Hashemzadeh).
+
