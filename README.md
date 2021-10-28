@@ -2,7 +2,7 @@ UFS-Net: a Unified Flame and Smoke detection method for early detection of fire 
 
 Condition and terms to use any sources of this project (Codes, Datasets, etc.):
 1)	Please cite the following paper:  
-Ali Hosseini, Mahdi Hashemzadeh, Nacer Farajzadeh, "UFS-Net: a Unified Flame and Smoke detection method for early detection of fire using CNNs," Information Sciences, 2021, (Under review).
+Ali Hosseini, Mahdi Hashemzadeh, Nacer Farajzadeh, "UFS-Net: a Unified Flame and Smoke detection method for early detection of fire in video surveillance applications using CNNs," Journal of Computational Science, 2021, (Under review).
 
      ** The use of code and dataset is not possible until this article is published.
 
