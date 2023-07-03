@@ -149,3 +149,4 @@ class UFSNet(nn.Module):
         # type: (Tensor) -> UFS-NetOutputs
         x = self._transform_input(x)
         x = self._forward(x)
+        return x
